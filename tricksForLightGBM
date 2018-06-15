@@ -1,0 +1,40 @@
+model complexity
+
+1 tree complexity:
+
+    1 num_leaves : < 2^max_depth
+
+    2 min_data_in_leaf : 避免树过深的生长 
+
+2 target related : 
+    1 objective:
+        1 regression_l2
+        2 regression_l1
+        3 binary
+        4 multiclass
+        5 xentropy
+        6 xentlambda
+    
+3 boosting model :
+    1 global 
+        1 method 
+            1 gbdt
+            2 rf
+            3 dart
+            4 goss (gbdt used)
+        2 num_iterations : number of tree
+        3 learning_rate = 0.1
+    2 tree parameters:
+        1 max_depth
+        2 min_data_in_leaf
+        3 feature_fraction
+        4 bagging_fraction
+        5 early_stopping
+4 I/O params :
+    1 header = True
+    2 label = ""
+    3 ignore_column
+    4 categorical_feature ：list of string
+5 predict:
+    1 predict_leaf_index
+    2 
